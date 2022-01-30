@@ -25,7 +25,6 @@
     5. Improve text rendering
   */
   body {
-    line-height: 1.5;
     -webkit-font-smoothing: antialiased;
   }
   /*
@@ -58,8 +57,135 @@
       list-style: none;
   }
 /* ---------------------------------- */
+.nav-bar{
+    background-color: white;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: row;
+    max-height: max-content;
+    height: 59px;
+  }
+.nav-bar ul{
+  width: 100%;  
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0;
+}
+.nav-bar li{
+  padding: 1em 2em;
+  transition: background-color 0.3s;
+}
+.nav-bar li:hover{
+  background-color: #BFBFBF;
+  transition: background-color 0.3s;
+}
+.nav-bar img{
+  padding: 0.8em;
+  max-width: 100px;
+}
 
-.body-header{
+.home-container h1{
+  text-align: center;
+  margin: 2em 5% 0.5em 5%; 
+  font-size: 2rem;
+}
+.tweets{
+  display: block;
+}
+.tweets div{
+  display: flex;
+  justify-content: center;
+  margin: 0 5%;
+}
+.tweets div *{
+  padding: 0;
+  margin: 0;
+}
+
+.cards{
+  margin: 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.spotify-card{
+  width: 100%;
+  height: 100%;
+  max-width: 900px;
+  min-height: 337px;
+}
+.gallery-card{  
+  width: 100%;
+  max-width: 900px;
+  margin-top: 5%;
+  transition: transform 0.5s;
+}
+.gallery-card:hover{
+  transition: transform 0.5s;
+  transform: scale(1.04);
+} 
+
+.page-ending{
+  text-align: center;
+  background-color: #000000;
+  padding: 2rem 0;
+}
+
+.nav-footer {
+  color: white;
+}
+.nav-footer ul {
+  padding: 0;
+}
+.nav-footer li {
+  padding: 0;
+  margin: 1rem 0;
+}
+.nav-footer a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.3rem;
+  transition: color 0.3s;
+}
+.nav-footer a:hover, a:active{
+  color: #949494;
+  transition: color 0.3s;
+}
+
+#note{
+  margin: 2rem;
+}
+.media-buttons{
+  display: flex;
+  justify-content: center; 
+}
+/* Icons */
+.fab{
+  margin: 0 5%;
+  padding: 10px;
+  color: white;
+  font-size: 2rem;
+  transition: color 0.4s;
+}
+.fab:hover{
+  color: #949494;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.credits{
+  margin-top: 2rem;
+  color: white;
+  font-size: 0.8rem;
+}
+
+
+
+
+/* .body-header{
   height: calc(0.79 * 100vw);
   background: no-repeat url("../images/dncewhite.jpg");
   background-size: 100%;
@@ -98,16 +224,6 @@
   max-width: 100px;
 }
 
-.body-header h1{
-  font-size: 5rem;
-  color: white;
-  margin-top: 15rem;
-  padding: 7rem 0;
-  background-color: rgb(0, 0, 0, 0.4);
-  text-align: center;
-  font-weight: 700;
-}
-
 .home-container{
     display: flex;
     flex-direction: column;    
@@ -129,15 +245,15 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
-}
+} */
 
-.card{  
+/* .card{  
   transition: transform 0.5s;
   margin: 2rem;
-  width: 100%;
+  width: 100%; */
   /* La sombra linda */
-  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
-}
+  /* box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset; */
+/* }
 .spotify-card:hover{
   transition: transform 0.5s;
   transform: scale(1.04);
@@ -153,11 +269,11 @@
 }
 .gallery-card img{
   width: 100%;  
-}
+} */
 
 
 
-.page-ending{
+/* .page-ending{
   background-color: #BFBFBF;
 }
 .page-ending h1{
@@ -176,14 +292,17 @@
   flex-direction: row;
   padding: 0 20rem 2rem;
   justify-content: space-evenly;
-}
+} */
 
 
 /* Iconos */
-.fa{
+/* .fa{
   padding: 20px;
   text-decoration: none;
-}
+} */
+
+
+/*I make the mobile design first */
 
 
 
