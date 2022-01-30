@@ -317,3 +317,43 @@
       "cuatro dos cinco";
   }  
 }
+
+/*=========================================
+-------------------MEMBERS-----------------
+===========================================
+*/
+.members-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#membersLabel{
+  margin: 1em;
+  font-size: 8vw;
+}
+.image-notso-large{
+  background-color: black;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.members-grid{
+  display: grid;
+  gap: 10vw;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  margin: 0 5% 10vw 5%;
+}
+.members-grid img{
+  width: 400px;   
+}
+.members-grid p, b{
+  font-size: 1.5rem;
+}
+
+/* Make font bigger with big screens */
+@media(min-width: 700px){
+  .members-grid p, b{
+    font-size: 4vw;
+  } 
+}
