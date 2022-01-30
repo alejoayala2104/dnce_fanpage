@@ -9,6 +9,7 @@
   */
   * {
     margin: 0;
+    padding: 0;
     font-family: 'Source Sans Pro', sans-serif;
     font-size: 18px;
   }
@@ -59,6 +60,99 @@
 /* ---------------------------------- */
 /* Imagenes son de https://www.flickr.com/photos/jenzbie/ */
 
+/* Menu */
+.navbar{  
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  color: black;
+  height: 59px;
+}
+.navbar-logo{
+  padding: 0.8em;
+  max-width: 100px;
+}
+.navbar-links {
+  height: 100%;
+}
+.navbar-links ul{
+  height: 100%;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+.navbar-links li{
+  height: 100%;
+  list-style: none;
+  transition: background-color 0.3s;
+}
+.navbar-links li a{
+  display: block;
+  text-decoration: none;
+  color: black;
+  padding: 1rem;
+}
+.navbar-links li:hover{
+  background-color: #BFBFBF;
+  transition: background-color 0.3s;
+}
+
+.toggle-button {
+  position: absolute;
+  top: 1.1rem;
+  right: 2rem;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+}
+
+.toggle-button .bar {
+  height: 3px;
+  width: 100%;
+  background-color: black;
+  border-radius: 10px;
+}
+
+/* Responsiveness */
+@media (max-width: 800px) {
+  .navbar {
+      flex-direction: column;
+      align-items: flex-start;
+  }
+
+  .toggle-button {
+      display: flex;
+  }
+
+  .navbar-links {
+      display: none;
+      width: 100%;
+  }
+
+  .navbar-links ul {
+      width: 100%;
+      flex-direction: column;
+  }
+
+  .navbar-links ul li {
+      text-align: center;
+      background-color: white;
+  }
+
+  .navbar-links ul li a {
+      padding: .5rem 1rem;
+      color: black;
+  }
+
+  .navbar-links.active {
+      display: flex;
+  }
+}
+
 .home-container h1{
   text-align: center;
   margin: 2em 5% 0.5em 5%; 
@@ -78,7 +172,7 @@
 }
 
 .cards{
-  margin: 5%;
+  margin: 0 5% 2rem 5%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -87,8 +181,8 @@
 .spotify-card{
   width: 100%;
   height: 90vw;
-  max-width: 900px;
-  max-height: 900px;
+  max-width: 600px;
+  max-height: 600px;
 }
 .gallery-card{  
   background: no-repeat url("../images/dncegallery.jpg");
@@ -98,8 +192,8 @@
   height: 90vw;
 
   width: 100%;
-  max-width: 900px;
-  max-height: 900px;
+  max-width: 600px;
+  max-height: 600px;
   margin: 0;
   margin-top: 5%;  
 
@@ -108,7 +202,6 @@
   align-items: center;
 
   transition: filter 0.3s;
-
 }
 .gallery-card:hover {  
   filter: brightness(65%); 
@@ -117,7 +210,7 @@
 }
 .gallery-card p{
   color: white;
-  font-size: 4rem;
+  font-size: 3rem;
   text-align: center;
   padding: 0;
 }
@@ -176,159 +269,51 @@
   font-size: 0.8rem;
 }
 
-
-
-/*Desde 800px. 799px no aplica*/
-@media (min-width: 700px){
-  .nav-bar{
-    background-color: white;
-    border-radius: 15px;
-    display: flex;
-    flex-direction: row;
-    max-height: max-content;
-    height: 59px;
+@media (min-width: 1440px){ 
+  .tweets{
+    display: grid;
+    gap: 1%;  
+    grid-template-columns: repeat(2,1fr);
+    grid-template-areas: 
+      "uno dos"
+      "tres dos"
+      "cuatro cinco";
   }
-  .nav-bar ul{
-    width: 100%;  
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-end;
+  .tweets div{   
+    margin: 0;
     padding: 0;
   }
-  .nav-bar li{
-    padding: 1em 2em;
-    transition: background-color 0.3s;
+  .tweet-1{
+    grid-area: uno;
+  }  
+  .tweet-2{
+    grid-area: dos;
   }
-  .nav-bar li:hover{
-    background-color: #BFBFBF;
-    transition: background-color 0.3s;
+  .tweet-3{
+    grid-area: tres;
   }
-  .nav-bar img{
-    padding: 0.8em;
-    max-width: 100px;
+  .tweet-4{
+    grid-area: cuatro;
   }
-}
+  .tweet-5{
+    grid-area: cinco;
+  }
 
-
-/* .body-header{
-  height: calc(0.79 * 100vw);
-  background: no-repeat url("../images/dncewhite.jpg");
-  background-size: 100%;
-  background-position: top center;
-}
-
-#spacetop{
-  height: 1px;
-}
-
-.nav-bar{
-  position: static;
-    background-color: white;
-    border-radius: 15px;
-    display: flex;
+  .cards{
     flex-direction: row;
-    margin: 3% 2%;
-    font-size: 1em;
-    max-height: 100px;
   }
-.nav-bar ul{
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  width: 100%;  
-  justify-content: flex-end;
+  .gallery-card{
+    margin-top: 0;
+    margin-left: 5%;
+  }
 }
-.nav-bar li{
-  padding: 1em 2em;
+@media (min-width: 2000px){
+  .tweets{
+    display: grid;
+    gap: 1%;  
+    grid-template-columns: repeat(3,1fr);
+    grid-template-areas:
+      "uno dos tres"
+      "cuatro dos cinco";
+  }  
 }
-.nav-bar li:hover{
-  background-color: #BFBFBF;
-}
-.nav-bar img{
-  padding: 15px;
-  max-width: 100px;
-}
-
-.home-container{
-    display: flex;
-    flex-direction: column;    
-}
-
-.big-text{
-  display: flex;
-  flex-direction: column; 
-  justify-content: center;
-  align-items: center;
-  height: 20rem;
-
-}
-.big-text h1{
-  font-size: 5em;
-}
-
-.home-card{
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-} */
-
-/* .card{  
-  transition: transform 0.5s;
-  margin: 2rem;
-  width: 100%; */
-  /* La sombra linda */
-  /* box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset; */
-/* }
-.spotify-card:hover{
-  transition: transform 0.5s;
-  transform: scale(1.04);
-}
-.gallery-card:hover{
-  transform: scale(1.04);
-  filter: brightness(50%); 
-  transition: transform 0.5s, filter 0.5s;
-}
-.spotify-card iframe{
-  width: 100%;
-  height: 100%;
-}
-.gallery-card img{
-  width: 100%;  
-} */
-
-
-
-/* .page-ending{
-  background-color: #BFBFBF;
-}
-.page-ending h1{
-  font-weight: 400;
-  text-align: center;
-  padding: 1rem 0 0;
-}
-.social-media-buttons{
-  display: flex;
-  flex-direction: row;
-  padding: 0 20rem;
-  justify-content: space-evenly;
-}
-.nav-footer ul{
-  display: flex;
-  flex-direction: row;
-  padding: 0 20rem 2rem;
-  justify-content: space-evenly;
-} */
-
-
-/* Iconos */
-/* .fa{
-  padding: 20px;
-  text-decoration: none;
-} */
-
-
-/*I make the mobile design first */
-
-
-

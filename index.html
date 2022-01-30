@@ -17,14 +17,21 @@
 
 <body>
     <header>
-        <nav class="nav-bar">
-            <img src="images/dncelogo.jpg" alt="">
-            <ul>
-                <li>Home</li>
-                <li>Members</li>
-                <li>Music</li>
-                <li>About</li>
-            </ul>
+        <nav class="navbar">
+            <img class="navbar-logo" src="images/dncelogo.jpg" alt="">
+            <a href="#" class="toggle-button">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </a>
+            <div class="navbar-links">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Members</a></li>
+                    <li><a href="#">Music</a></li>
+                    <li><a href="#">About</a></li>
+                </ul>
+            </div>
         </nav>
     </header>
 
@@ -33,7 +40,7 @@
             <img src="images/dncewhite.jpg" alt="DNCE Landing Image">
             <h1>We might be back...</h1>
             <section class="tweets">
-                <div>
+                <div class="tweet-1">
                     <blockquote class="twitter-tweet">
                         <p lang="en" dir="ltr">When <a
                                 href="https://twitter.com/RyanTedder?ref_src=twsrc%5Etfw">@RyanTedder</a> was talking
@@ -51,8 +58,8 @@
                     <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
                 </div>
 
-                <div>
-                    <blockquote class="twitter-tweet">
+                <div class="tweet-2">
+                    <blockquote class="twitter-tweet grid-row-span-2">
                         <p lang="en" dir="ltr">Explain the song in the background? <a
                                 href="https://twitter.com/DNCE?ref_src=twsrc%5Etfw">@DNCE</a> <a
                                 href="https://t.co/EYZlgiXaRv">pic.twitter.com/EYZlgiXaRv</a></p>&mdash; DNCE Online
@@ -63,7 +70,7 @@
                     <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
                 </div>
 
-                <div>
+                <div class="tweet-3">
                     <blockquote class="twitter-tweet">
                         <p lang="en" dir="ltr">.<a
                                 href="https://twitter.com/jinjoomusic?ref_src=twsrc%5Etfw">@JinJooMusic</a> reposted her
@@ -78,7 +85,7 @@
                     <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
                 </div>
 
-                <div>
+                <div class="tweet-4">
                     <blockquote class="twitter-tweet">
                         <p lang="en" dir="ltr">.<a href="https://twitter.com/joejonas?ref_src=twsrc%5Etfw">@JoeJonas</a>
                             on IG: 😏 <a href="https://t.co/xh1PPVNMnF">pic.twitter.com/xh1PPVNMnF</a></p>&mdash; DNCE
@@ -89,7 +96,7 @@
                     <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
                 </div>
 
-                <div>
+                <div class="tweet-5">
                     <blockquote class="twitter-tweet">
                         <p lang="en" dir="ltr">‼️<a href="https://twitter.com/DNCE?ref_src=twsrc%5Etfw">@DNCE</a> IS
                             COMING‼️ <a href="https://t.co/69Pr1Ploo3">https://t.co/69Pr1Ploo3</a> <a
@@ -102,6 +109,7 @@
                 </div>
             </section>
 
+            <h1>Listen to some tunes</h1>
             <div class="cards">
                 <iframe class="spotify-card card"
                     src="https://open.spotify.com/embed/playlist/37i9dQZF1DZ06evO44vl7O?utm_source=generator&theme=0"
@@ -118,11 +126,11 @@
     <footer class="page-ending">
         <nav class="nav-footer">
             <ul>
-                <li><a href="">Home</a></li>
+                <li><a href="index.html">Home</a></li>
                 <li><a href="">Members</a></li>
                 <li><a href="">Music</a></li>
                 <li><a href="">About</a></li>
-                <li id="note">♪</li>
+                <li id="note">Social media</li>
             </ul>
         </nav>
 
@@ -136,6 +144,7 @@
     </footer>
 
     <script src="https://kit.fontawesome.com/c7e76d49d2.js" crossorigin="anonymous"></script>
+    <script src="js/menu.js"></script>
 </body>
 
 </html>
