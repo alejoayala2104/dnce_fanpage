@@ -478,10 +478,13 @@
 
 @media screen and (min-width: 1200px){
   .music-container{
-    padding: 0 25vh;
+    padding: 0 10vh;
   }
   .record{
-    gap: 12vw;
+    gap: 5vw;
     flex-direction: row;
+  }
+  .record img{
+    width: 50%;
   }
 }
