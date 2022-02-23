@@ -267,11 +267,12 @@
 }
 
 #note{
-  margin: 2rem;
+  margin: 1.5rem;
 }
 .media-buttons{
   display: flex;
   justify-content: center; 
+  gap: 1rem;
 }
 /* Icons */
 .fab{
