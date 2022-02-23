@@ -69,6 +69,7 @@
   background-color: white;
   color: black;
   height: 59px;
+  box-shadow: rgba(0, 0, 0, 0.45) 0px 1px 4px -1px;
 }
 .navbar-logo{
   padding: 0.8em;
@@ -174,6 +175,7 @@
   .navbar-links.active {
       display: flex;
   }
+  
 }
 
 .home-container h1{
@@ -352,7 +354,7 @@
   flex-direction: column;
   align-items: center;
 }
-#main-h1{
+.main-h1{
   margin: 1em;
   font-size: 6vw;
 }
@@ -381,6 +383,7 @@
   .members-grid p, b{
     font-size: 4vw;
   } 
+  
 }
 
 /*=========================================
@@ -474,6 +477,37 @@
   width: 50px;
 }
 
+/*=========================================
+-------------------NEW-----------------
+===========================================
+*/
+.big-h1 {
+  margin: 4rem 0;
+  margin-bottom: 6vw;
+  font-size: 6vw;
+}
+
+.spacing{
+  margin-bottom: 4rem;
+}
+
+.available{
+  font-size: 4vw;
+}
+.available span{
+  font-size: 4vw;
+  color: red;
+}
+.dancing-video{
+  min-height: 400px;
+  width: 100%;
+  max-width: 746px;
+}
+
+.new-container{
+  padding: 0 5vw;
+}
+
 
 /*---------------------*/
 
@@ -488,4 +522,8 @@
   .record img{
     width: 50%;
   }
+ 
 }
+
+
+
